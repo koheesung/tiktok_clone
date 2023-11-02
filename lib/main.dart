@@ -11,7 +11,7 @@ class TikTokApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'TilTok Colne.',
+      title: 'TilTok Colne',
       theme: ThemeData(
         primaryColor: const Color(0xFFff2a55),
       ),
