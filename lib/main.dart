@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:tiktok_clone/features/authentication/sign_up_scrren.dart';
 
 void main() {
   runApp(const TikTokApp());
@@ -15,18 +15,20 @@ class TikTokApp extends StatelessWidget {
     return MaterialApp(
       title: 'TilTok Colne',
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
         primaryColor: const Color(0xFFff2a55),
-      ),
-      home: Padding(
-        padding: const EdgeInsets.all(Sizes.size14),
-        child: Container(
-          child: const Row(children: [
-            Text('hello'),
-            Gaps.h20,
-            Text('hello'),
-          ]),
+        appBarTheme: const AppBarTheme(
+          foregroundColor: Colors.black,
+          backgroundColor: Colors.white,
+          elevation: 0,
+          titleTextStyle: TextStyle(
+            color: Colors.black,
+            fontSize: SSizes.size16 + SSizes.size2,
+            fontWeight: FontWeight.w600,
+          ),
         ),
       ),
+      home: const SignUpScrren(),
     );
   }
 }
