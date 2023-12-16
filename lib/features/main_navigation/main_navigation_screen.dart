@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/constants/ssizes.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/features/discover/discover_screen.dart';
+import 'package:tiktok_clone/features/inbox/inbox_screen.dart';
 import 'package:tiktok_clone/features/main_navigation/widgets/nav_tap.dart';
 import 'package:tiktok_clone/features/main_navigation/widgets/post_video_button.dart';
 import 'package:tiktok_clone/features/videos/video_timeline_screen.dart';
@@ -17,7 +18,7 @@ class MainNavigationScrren extends StatefulWidget {
 }
 
 class _MainNavigationScrrenState extends State<MainNavigationScrren> {
-  int _selectIndex = 1;
+  int _selectIndex = 3;
   double _pVBPressSize = 0.0;
 
   final _screen = [
@@ -88,7 +89,7 @@ class _MainNavigationScrrenState extends State<MainNavigationScrren> {
           ),
           Offstage(
             offstage: _selectIndex != 3,
-            child: Container(),
+            child: const InboxScreen(),
           ),
           Offstage(
             offstage: _selectIndex != 4,
